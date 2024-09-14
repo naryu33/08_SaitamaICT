@@ -1,0 +1,188 @@
+/* 全体の基本設定 */
+* {
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #333333;
+  scroll-behavior: smooth;
+}
+
+/* 画像の設定 */
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* ヘッダー */
+header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  padding: 0 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+header .top-link {
+  width: 50px;
+  height: 50px;
+}
+
+header .top-link img {
+  width: 15%;
+  height: 15%;
+  object-fit: contain;
+}
+
+header nav .nav-link {
+  font-size: 20px;
+  font-weight: bold;
+  height: 70px;
+  color: #333333;
+  padding: 16px;
+}
+
+header nav .nav-link:hover {
+  text-decoration: underline;
+}
+
+/* スライドショー */
+.swiper-container .swiper-wrapper .swiper-slide { /* スライドの一枚一枚の装飾 */
+  width: 100%; /* 画面幅いっぱいに広げる */
+  height: 100vh; /* 画面高さいっぱいに広げる */
+}
+
+.swiper-container .swiper-wrapper .swiper-slide img { /* スライドの中の画像の装飾 */
+  width: 100%; /* .swiper-slideの幅いっぱいに広げる */
+  height: 100%; /* .swiper-slideの高さいっぱいに広げる */
+  object-fit: cover; /* 画像を縦横比を保ったまま、.swiper-slideの中に収まるようにする */
+}
+
+.swiper-container .top-title {
+  font-size: 100px;
+  font-family: "Lobster Two", cursive;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  text-shadow: 2px 4px 0px rgba(255, 255, 255, 0.5);
+}
+
+section { /* section全体の装飾 */
+  padding-top: 160px; /* sectionの上部に余白をつける */
+}
+
+section h2.section-title { /* セクションタイトルの装飾 */
+  font-family: "Lobster Two", cursive; /* フォントの種類を"Lobster Two"にする */
+  font-size: 50px; /* 文字の大きさを50pxにする */
+
+  width: fit-content; /* 文字の長さに合わせて自動的に調整する */
+
+  margin-bottom: 40px; /* セクションタイトルの下に余白をつける */
+  margin-left: auto; /* セクションタイトルを左右中央に配置する */
+  margin-right: auto;
+}
+
+section h2.section-title::before,
+section h2.section-title::after { /* セクションタイトルの両脇の装飾 */
+  content: " - "; /* セクションタイトルの両脇にハイフンをつける */
+}
+
+section .container { /* セクションの中身の装飾 */
+  max-width: 1024px; /* セクションの中身の最大幅を1024pxにする */
+  width: calc(100% - 40px); /* セクションの中身の幅を100%にして、左右に20pxずつ余白をつける */
+
+  margin-left: auto; /* セクションの中身を左右中央に配置する */
+  margin-right: auto;
+}
+
+/* 紹介ページ */
+.saitama .container {
+  display: flex;
+  align-items: center;
+}
+
+.saitama .container .profile-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: 0 100%;
+  border-radius: 50%;
+}
+
+.saitama .container .profile-text {
+  margin-left: 50px;
+}
+
+/* お気に入り */
+.donnatokoro .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.donnatokoro .container .item {
+  width: 100%;
+}
+
+.donnatokoro .container .item-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.donnatokoro .container .item-cover {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+/* セクション画像 */
+.section-image img {
+  height: 400px;
+  object-fit: cover;
+}
+
+/* おすすめの場所 */
+.osusume .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.osusume .container .item {
+  width: 100%;
+}
+
+.osusume .container .item-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.osusume .container .item-cover {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+/* フッター */
+footer {
+  background-color: #333333;
+  color: #ffffff;
+  text-align: center;
+  padding: 16px 0;
+  margin-top: 120px;
+}
